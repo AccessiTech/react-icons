@@ -29,7 +29,7 @@ async function main() {
       await taskCommon.writeEntryPoints(allOpt);
       await taskCommon.writeIconsManifest(allOpt);
       await taskCommon.writeLicense(allOpt);
-      await taskCommon.writePackageJson({ name: "react-icons" }, allOpt);
+      await taskCommon.writePackageJson({ name: "@accessitech/react-icons" }, allOpt);
       await taskCommon.copyReadme(allOpt);
     });
     await task("@react-icons/all write icons", async () => {
@@ -50,7 +50,7 @@ async function main() {
       await taskCommon.writeIconsManifest(filesOpt);
       await taskCommon.writeLicense(filesOpt);
       await taskCommon.writePackageJson(
-        { name: "@react-icons/all-files" },
+        { name: "@accessitech/react-icons_all-files" },
         filesOpt
       );
       await taskCommon.copyReadme(filesOpt);
