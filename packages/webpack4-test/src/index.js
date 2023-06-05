@@ -1,3 +1,3 @@
-import { FaTimes } from "react-icons/fa";
+import { FaTimes } from "@accessitech/react-icons/fa";
 
 console.log(FaTimes);

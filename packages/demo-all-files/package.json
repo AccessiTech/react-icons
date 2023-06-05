@@ -1,11 +1,11 @@
 {
   "name": "demo-all-files",
-  "version": "4.8.1-snapshot.2",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@accessitech/react-icons": "file:../_react-icons_all",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.8.1-snapshot.2",
     "react-scripts": "^5.0.1"
   },
   "scripts": {
