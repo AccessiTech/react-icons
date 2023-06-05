@@ -14,6 +14,7 @@
     "prettier": "^2.7.1"
   },
   "scripts": {
+    "init": "yarn && ./build-script.sh", 
     "lint": "yarn eslint .",
     "format": "prettier --write --ignore-unknown .",
     "format:ci": "prettier --check --ignore-unknown .",
