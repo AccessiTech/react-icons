@@ -14,12 +14,12 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:react-icons/react-icons.git"
+    "url": "git+ssh://git@github.com:accessitech/react-icons.git"
   },
   "bugs": {
-    "url": "https://github.com/react-icons/react-icons/issues"
+    "url": "https://github.com/accessitech/react-icons/issues"
   },
-  "homepage": "https://github.com/react-icons/react-icons#readme",
+  "homepage": "https://github.com/accessitech/react-icons#readme",
   "peerDependencies": {
     "react": "*"
   }
