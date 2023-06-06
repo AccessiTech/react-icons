@@ -154,6 +154,49 @@ function Question() {
 
 You can add more icons by submitting pull requests or creating issues.
 
+## Contributing
+
+`./build-script.sh` will build the whole project. See also CI scripts for more information.
+
+### Development
+
+```bash
+yarn
+cd packages/react-icons
+yarn fetch  # fetch icon sources
+yarn build
+```
+
+### Preview
+
+The preview site is the [`react-icons`](https://react-icons.github.io/react-icons) website, built in [NextJS](https://nextjs.org/).
+
+```bash
+cd packages/react-icons
+yarn fetch
+yarn build
+
+cd ../preview
+yarn start
+```
+
+### Demo
+
+The demo is a [Create React App](https://create-react-app.dev/) boilerplate with `react-icons` added as a dependency for easy testing.
+
+```bash
+cd packages/react-icons
+yarn fetch
+yarn build
+
+cd ../demo
+yarn start
+```
+
+## Why React SVG components instead of fonts?
+
+SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
+
 ## Migrating from version 2 -> 3
 
 ### Change import style
@@ -229,49 +272,6 @@ yarn remove @types/react-icons
 ```bash
 npm remove @types/react-icons
 ```
-
-## Contributing
-
-`./build-script.sh` will build the whole project. See also CI scripts for more information.
-
-### Development
-
-```bash
-yarn
-cd packages/react-icons
-yarn fetch  # fetch icon sources
-yarn build
-```
-
-### Preview
-
-The preview site is the [`react-icons`](https://react-icons.github.io/react-icons) website, built in [NextJS](https://nextjs.org/).
-
-```bash
-cd packages/react-icons
-yarn fetch
-yarn build
-
-cd ../preview
-yarn start
-```
-
-### Demo
-
-The demo is a [Create React App](https://create-react-app.dev/) boilerplate with `react-icons` added as a dependency for easy testing.
-
-```bash
-cd packages/react-icons
-yarn fetch
-yarn build
-
-cd ../demo
-yarn start
-```
-
-## Why React SVG components instead of fonts?
-
-SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
 
 ## Related Projects
 
