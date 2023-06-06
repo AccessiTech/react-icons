@@ -43,6 +43,52 @@ function Question() {
 
 For example, to use an icon from **Material Design**, your import would be: `import { ICON_NAME } from 'react-icons/md';`
 
+## React Icons API
+
+### Icon
+
+Icon components are named by their `camelCase` equivalent and have the same props as [the original `react-icons` library](https://github.com/react-icons/react-icons/blob/master/packages/react-icons/src/iconBase.tsx#L32-L37).
+
+```ts
+interface IconBaseProps extends React.SVGAttributes<SVGElement> {
+  children?: React.ReactNode;
+  size?: string | number;
+  color?: string;
+  title?: string;
+}
+```
+
+| Key         | Default               | Notes                              |
+| ----------- | --------------------- | ---------------------------------- |
+| `color`     | `undefined` (inherit) |                                    |
+| `size`      | `1em`                 |                                    |
+| `className` | `undefined`           |                                    |
+| `style`     | `undefined`           | Can overwrite size and color       |
+| `attr`      | `undefined`           | Overwritten by other attributes    |
+| `title`     | `undefined`           | Icon description for accessibility |
+
+### IconContext.Provider
+
+The `IconContext.Provider` component allows you to easily customize the props of all child icon components using[React Context API](https://reactjs.org/docs/context.html), and has the same props as [the original `react-icons` library](https://github.com/react-icons/react-icons/blob/master/packages/react-icons/src/iconContext.tsx#L3-L9).
+
+```ts
+interface IconContext {
+  color?: string;
+  size?: string;
+  className?: string;
+  style?: React.CSSProperties;
+  attr?: React.SVGAttributes<SVGElement>;
+}
+```
+
+| Key         | Default               | Notes                           |
+| ----------- | --------------------- | ------------------------------- |
+| `color`     | `undefined` (inherit) |                                 |
+| `size`      | `1em`                 |                                 |
+| `className` | `undefined`           |                                 |
+| `style`     | `undefined`           | Can overwrite size and color    |
+| `attr`      | `undefined`           | Overwritten by other attributes |
+
 <!--
 ## Installation (for meteorjs, gatsbyjs, etc)
 
@@ -74,7 +120,7 @@ function Question() {
 ```
 -->
 
-## Icons
+## Available Icons
 
 | Icon Library                                                            | License                                                                                           | Version                                  | Count |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----: |
@@ -107,31 +153,6 @@ function Question() {
 | [Radix Icons](https://icons.radix-ui.com)                               | [MIT](https://github.com/radix-ui/icons/blob/master/LICENSE)                                      | @modulz/generate-icon-lib@0.2.1          |   318 |
 
 You can add more icons by submitting pull requests or creating issues.
-
-## Configuration
-
-You can configure react-icons props using [React Context API](https://reactjs.org/docs/context.html).
-
-_Requires **React 16.3** or higher._
-
-```jsx
-import { IconContext } from "react-icons";
-
-<IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
-  <div>
-    <FaFolder />
-  </div>
-</IconContext.Provider>;
-```
-
-| Key         | Default               | Notes                              |
-| ----------- | --------------------- | ---------------------------------- |
-| `color`     | `undefined` (inherit) |                                    |
-| `size`      | `1em`                 |                                    |
-| `className` | `undefined`           |                                    |
-| `style`     | `undefined`           | Can overwrite size and color       |
-| `attr`      | `undefined`           | Overwritten by other attributes    |
-| `title`     | `undefined`           | Icon description for accessibility |
 
 ## Migrating from version 2 -> 3
 
