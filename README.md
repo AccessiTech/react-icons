@@ -193,6 +193,10 @@ cd ../demo
 yarn start
 ```
 
+### Everything
+
+To build everything, run `./build-script.sh` or `yarn build`.
+
 ## Why React SVG components instead of fonts?
 
 SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
