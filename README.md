@@ -1,10 +1,10 @@
-<img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="120" alt="React Icons">
+<img src="./accessitech-react-icons.svg" width="120" alt="React Icons">
 
 # [React Icons](https://react-icons.github.io/react-icons)
 
 [![npm][npm-image]][npm-url]
 
-[npm-image]: https://img.shields.io/npm/v/react-icons.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/@accessitech/react-icons.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/react-icons
 
 Include popular icons in your React projects easily with `react-icons`, which utilizes ES6 imports that allows you to include only the icons that your project is using.
@@ -12,6 +12,7 @@ Include popular icons in your React projects easily with `react-icons`, which ut
 This repository is an accessibility focused version of the original [react-icons](https://github.com/react-icons/react-icons) library. It is a fork of the original react-icons library with the following changes:
 
 - All icons are exported as `<svg>` elements with a `<title>` tag which defaults to "Icon" if no title is provided by the developer.
+- Build scripts have been added and modified to streamline setup and contribution.
 
 ## Installation (for standard modern project)
 
@@ -21,16 +22,19 @@ yarn add react-icons
 npm install react-icons --save
 ```
 
-example usage
+### Example usage
 
 ```jsx
-import { FaBeer } from "react-icons/fa";
+import { IconContext } from "@accessitech/react-icons";
+import { FaBeer } from "@accessitech/react-icons/fa";
 
 function Question() {
   return (
-    <h3>
-      Lets go for a <FaBeer />?
-    </h3>
+    <IconContext.Provider>
+      <h3>
+        Lets go for a <FaBeer />?
+      </h3>
+    </IconContext.Provider>
   );
 }
 ```
@@ -39,6 +43,53 @@ function Question() {
 
 For example, to use an icon from **Material Design**, your import would be: `import { ICON_NAME } from 'react-icons/md';`
 
+## React Icons API
+
+### Icon
+
+Icon components are named by their `camelCase` equivalent and have the same props as [the original `react-icons` library](https://github.com/react-icons/react-icons/blob/master/packages/react-icons/src/iconBase.tsx#L32-L37).
+
+```ts
+interface IconBaseProps extends React.SVGAttributes<SVGElement> {
+  children?: React.ReactNode;
+  size?: string | number;
+  color?: string;
+  title?: string;
+}
+```
+
+| Key         | Default               | Notes                              |
+| ----------- | --------------------- | ---------------------------------- |
+| `color`     | `undefined` (inherit) |                                    |
+| `size`      | `1em`                 |                                    |
+| `className` | `undefined`           |                                    |
+| `style`     | `undefined`           | Can overwrite size and color       |
+| `attr`      | `undefined`           | Overwritten by other attributes    |
+| `title`     | `undefined`           | Icon description for accessibility |
+
+### IconContext.Provider
+
+The `IconContext.Provider` component allows you to easily customize the props of all child icon components using[React Context API](https://reactjs.org/docs/context.html), and has the same props as [the original `react-icons` library](https://github.com/react-icons/react-icons/blob/master/packages/react-icons/src/iconContext.tsx#L3-L9).
+
+```ts
+interface IconContext {
+  color?: string;
+  size?: string;
+  className?: string;
+  style?: React.CSSProperties;
+  attr?: React.SVGAttributes<SVGElement>;
+}
+```
+
+| Key         | Default               | Notes                           |
+| ----------- | --------------------- | ------------------------------- |
+| `color`     | `undefined` (inherit) |                                 |
+| `size`      | `1em`                 |                                 |
+| `className` | `undefined`           |                                 |
+| `style`     | `undefined`           | Can overwrite size and color    |
+| `attr`      | `undefined`           | Overwritten by other attributes |
+
+<!--
 ## Installation (for meteorjs, gatsbyjs, etc)
 
 > **Note**
@@ -67,8 +118,9 @@ function Question() {
   );
 }
 ```
+-->
 
-## Icons
+## Available Icons
 
 | Icon Library                                                            | License                                                                                           | Version                                  | Count |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----: |
@@ -102,30 +154,52 @@ function Question() {
 
 You can add more icons by submitting pull requests or creating issues.
 
-## Configuration
+## Contributing
 
-You can configure react-icons props using [React Context API](https://reactjs.org/docs/context.html).
+`./build-script.sh` will build the whole project. See also CI scripts for more information.
 
-_Requires **React 16.3** or higher._
+### Development
 
-```jsx
-import { IconContext } from "react-icons";
-
-<IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
-  <div>
-    <FaFolder />
-  </div>
-</IconContext.Provider>;
+```bash
+yarn
+cd packages/react-icons
+yarn fetch  # fetch icon sources
+yarn build
 ```
 
-| Key         | Default               | Notes                              |
-| ----------- | --------------------- | ---------------------------------- |
-| `color`     | `undefined` (inherit) |                                    |
-| `size`      | `1em`                 |                                    |
-| `className` | `undefined`           |                                    |
-| `style`     | `undefined`           | Can overwrite size and color       |
-| `attr`      | `undefined`           | Overwritten by other attributes    |
-| `title`     | `undefined`           | Icon description for accessibility |
+### Preview
+
+The preview site is the [`react-icons`](https://react-icons.github.io/react-icons) website, built in [NextJS](https://nextjs.org/).
+
+```bash
+cd packages/react-icons
+yarn fetch
+yarn build
+
+cd ../preview
+yarn start
+```
+
+### Demo
+
+The demo is a [Create React App](https://create-react-app.dev/) boilerplate with `react-icons` added as a dependency for easy testing.
+
+```bash
+cd packages/react-icons
+yarn fetch
+yarn build
+
+cd ../demo
+yarn start
+```
+
+### Everything
+
+To build everything, run `./build-script.sh` or `yarn build`.
+
+## Why React SVG components instead of fonts?
+
+SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
 
 ## Migrating from version 2 -> 3
 
@@ -202,49 +276,6 @@ yarn remove @types/react-icons
 ```bash
 npm remove @types/react-icons
 ```
-
-## Contributing
-
-`./build-script.sh` will build the whole project. See also CI scripts for more information.
-
-### Development
-
-```bash
-yarn
-cd packages/react-icons
-yarn fetch  # fetch icon sources
-yarn build
-```
-
-### Preview
-
-The preview site is the [`react-icons`](https://react-icons.github.io/react-icons) website, built in [NextJS](https://nextjs.org/).
-
-```bash
-cd packages/react-icons
-yarn fetch
-yarn build
-
-cd ../preview
-yarn start
-```
-
-### Demo
-
-The demo is a [Create React App](https://create-react-app.dev/) boilerplate with `react-icons` added as a dependency for easy testing.
-
-```bash
-cd packages/react-icons
-yarn fetch
-yarn build
-
-cd ../demo
-yarn start
-```
-
-## Why React SVG components instead of fonts?
-
-SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
 
 ## Related Projects
 
