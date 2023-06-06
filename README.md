@@ -21,16 +21,19 @@ yarn add react-icons
 npm install react-icons --save
 ```
 
-example usage
+### Example usage
 
 ```jsx
-import { FaBeer } from "react-icons/fa";
+import { IconContext } from "@accessitech/react-icons";
+import { FaBeer } from "@accessitech/react-icons/fa";
 
 function Question() {
   return (
-    <h3>
-      Lets go for a <FaBeer />?
-    </h3>
+    <IconContext.Provider>
+      <h3>
+        Lets go for a <FaBeer />?
+      </h3>
+    </IconContext.Provider>
   );
 }
 ```
