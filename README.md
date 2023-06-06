@@ -12,6 +12,7 @@ Include popular icons in your React projects easily with `react-icons`, which ut
 This repository is an accessibility focused version of the original [react-icons](https://github.com/react-icons/react-icons) library. It is a fork of the original react-icons library with the following changes:
 
 - All icons are exported as `<svg>` elements with a `<title>` tag which defaults to "Icon" if no title is provided by the developer.
+- Build scripts have been added and modified to streamline setup and contribution.
 
 ## Installation (for standard modern project)
 
