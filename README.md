@@ -39,6 +39,7 @@ function Question() {
 
 For example, to use an icon from **Material Design**, your import would be: `import { ICON_NAME } from 'react-icons/md';`
 
+<!--
 ## Installation (for meteorjs, gatsbyjs, etc)
 
 > **Note**
