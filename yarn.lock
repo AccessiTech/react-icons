@@ -19,47 +19,47 @@ __metadata:
   linkType: soft
 
 "@accessitech/react-icons@file:../_react-icons_all::locator=demo%40workspace%3Apackages%2Fdemo":
-  version: 1.0.2
-  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=376b23&locator=demo%40workspace%3Apackages%2Fdemo"
+  version: 1.0.3
+  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=6b894a&locator=demo%40workspace%3Apackages%2Fdemo"
   peerDependencies:
     react: "*"
-  checksum: 45917ab4992e141d6ec5f6339b3d6635124bc8c916e117f48cfcbc54a1156b712a68e1fbd73210eafaabdeb2b30d538b13e01a72ffe8a6c7416641b6b1e943e9
+  checksum: f0d1e2fdf262f4597f1fec93689a4c78f3925b51d32ce188968fbc4bd68a6c35262031685d9d4ee627f04cb39a847d2265055ba48a1a1336dc109d7912376e7c
   languageName: node
   linkType: hard
 
 "@accessitech/react-icons@file:../_react-icons_all::locator=demo-all-files%40workspace%3Apackages%2Fdemo-all-files":
-  version: 1.0.2
-  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=376b23&locator=demo-all-files%40workspace%3Apackages%2Fdemo-all-files"
+  version: 1.0.3
+  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=6b894a&locator=demo-all-files%40workspace%3Apackages%2Fdemo-all-files"
   peerDependencies:
     react: "*"
-  checksum: 45917ab4992e141d6ec5f6339b3d6635124bc8c916e117f48cfcbc54a1156b712a68e1fbd73210eafaabdeb2b30d538b13e01a72ffe8a6c7416641b6b1e943e9
+  checksum: f0d1e2fdf262f4597f1fec93689a4c78f3925b51d32ce188968fbc4bd68a6c35262031685d9d4ee627f04cb39a847d2265055ba48a1a1336dc109d7912376e7c
   languageName: node
   linkType: hard
 
 "@accessitech/react-icons@file:../_react-icons_all::locator=preview%40workspace%3Apackages%2Fpreview":
-  version: 1.0.2
-  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=376b23&locator=preview%40workspace%3Apackages%2Fpreview"
+  version: 1.0.3
+  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=6b894a&locator=preview%40workspace%3Apackages%2Fpreview"
   peerDependencies:
     react: "*"
-  checksum: 45917ab4992e141d6ec5f6339b3d6635124bc8c916e117f48cfcbc54a1156b712a68e1fbd73210eafaabdeb2b30d538b13e01a72ffe8a6c7416641b6b1e943e9
+  checksum: f0d1e2fdf262f4597f1fec93689a4c78f3925b51d32ce188968fbc4bd68a6c35262031685d9d4ee627f04cb39a847d2265055ba48a1a1336dc109d7912376e7c
   languageName: node
   linkType: hard
 
 "@accessitech/react-icons@file:../_react-icons_all::locator=react-ts-test%40workspace%3Apackages%2Fts-test":
-  version: 1.0.2
-  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=376b23&locator=react-ts-test%40workspace%3Apackages%2Fts-test"
+  version: 1.0.3
+  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=6b894a&locator=react-ts-test%40workspace%3Apackages%2Fts-test"
   peerDependencies:
     react: "*"
-  checksum: 45917ab4992e141d6ec5f6339b3d6635124bc8c916e117f48cfcbc54a1156b712a68e1fbd73210eafaabdeb2b30d538b13e01a72ffe8a6c7416641b6b1e943e9
+  checksum: f0d1e2fdf262f4597f1fec93689a4c78f3925b51d32ce188968fbc4bd68a6c35262031685d9d4ee627f04cb39a847d2265055ba48a1a1336dc109d7912376e7c
   languageName: node
   linkType: hard
 
 "@accessitech/react-icons@file:../_react-icons_all::locator=webpack4-test%40workspace%3Apackages%2Fwebpack4-test":
-  version: 1.0.2
-  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=376b23&locator=webpack4-test%40workspace%3Apackages%2Fwebpack4-test"
+  version: 1.0.3
+  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=6b894a&locator=webpack4-test%40workspace%3Apackages%2Fwebpack4-test"
   peerDependencies:
     react: "*"
-  checksum: 45917ab4992e141d6ec5f6339b3d6635124bc8c916e117f48cfcbc54a1156b712a68e1fbd73210eafaabdeb2b30d538b13e01a72ffe8a6c7416641b6b1e943e9
+  checksum: f0d1e2fdf262f4597f1fec93689a4c78f3925b51d32ce188968fbc4bd68a6c35262031685d9d4ee627f04cb39a847d2265055ba48a1a1336dc109d7912376e7c
   languageName: node
   linkType: hard
 
