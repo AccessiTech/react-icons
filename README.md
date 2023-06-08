@@ -17,9 +17,9 @@ This repository is an accessibility focused version of the original [react-icons
 ## Installation (for standard modern project)
 
 ```bash
-yarn add react-icons
+yarn add @accessitech/react-icons
 # or
-npm install react-icons --save
+npm install @accessitech/react-icons --save
 ```
 
 ### Example usage
