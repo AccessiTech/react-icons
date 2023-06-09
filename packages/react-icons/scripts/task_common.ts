@@ -166,6 +166,10 @@ export async function writePackageJson(override, { DIST, LIB, rootDir }) {
   packageJson = {
     ...packageJson,
     ...override,
+    scripts: {
+      pack: "npm pack",
+      // todo: add tests and publish scripts
+    },
   };
 
   const editedPackageJsonStr = JSON.stringify(packageJson, null, 2) + "\n";

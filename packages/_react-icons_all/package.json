@@ -20,6 +20,9 @@
     "url": "https://github.com/accessitech/react-icons/issues"
   },
   "homepage": "https://github.com/accessitech/react-icons#readme",
+  "scripts": {
+    "pack": "npm pack"
+  },
   "peerDependencies": {
     "react": "*"
   }

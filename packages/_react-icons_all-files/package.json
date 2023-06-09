@@ -22,5 +22,8 @@
   "homepage": "https://github.com/accessitech/react-icons#readme",
   "peerDependencies": {
     "react": "*"
+  },
+  "scripts": {
+    "pack": "npm pack"
   }
 }
