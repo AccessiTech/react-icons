@@ -15,11 +15,13 @@
   },
   "scripts": {
     "lerna": "lerna",
+    "version-up": "lerna version --force-local",
     "pack": " yarn lerna run --scope @accessitech/react-icons pack",
+    "publish:icons": "yarn lerna run --scope @accessitech/react-icons publish",
     "fetch-icons": "(cd packages/react-icons/ && yarn fetch)",
     "init-icons": "yarn fetch-icons && yarn build",
     "build:icons": "(cd packages/react-icons/ && yarn build)",
-    "build": "yarn build:icons && yarn pack && yarn",
+    "build": "yarn build:icons && yarn",
     "build:preview": "(cd packages/preview/ && yarn build)",
     "build:demo": "(cd packages/demo/ && CI=true yarn test && yarn build)",
     "build:ts-test": "(cd packages/ts-test/ && SKIP_PREFLIGHT_CHECK=true yarn build)",
@@ -32,8 +34,6 @@
     "lint": "yarn eslint .",
     "format": "prettier --write --ignore-unknown .",
     "format:ci": "prettier --check --ignore-unknown .",
-    "version-up": "lerna version",
-    "publish": "yarn lerna run --scope @accessitech/react-icons publish",
     "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch --force-publish",
     "version": "yarn install && git add ."
   },
