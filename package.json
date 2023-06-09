@@ -14,11 +14,9 @@
     "prettier": "^2.7.1"
   },
   "scripts": {
-    "init-icons": "yarn fetch-icons && yarn build && yarn",
+    "init-icons": "yarn fetch-icons && yarn build && yarn pack && yarn",
     "fetch-icons": "(cd packages/react-icons/ && yarn fetch)",
-    "build:icons": "(cd packages/react-icons/ && yarn build)",
-    "build:all-files": "(cd packages/_react-icons_all-files && yarn build)",
-    "build": "yarn build:icons && yarn build:all-files",
+    "build": "(cd packages/react-icons/ && yarn build)",
     "build:preview": "(cd packages/preview/ && yarn build)",
     "build:demo": "(cd packages/demo/ && CI=true yarn test && yarn build)",
     "build:ts-test": "(cd packages/ts-test/ && SKIP_PREFLIGHT_CHECK=true yarn build)",
