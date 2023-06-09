@@ -33,6 +33,7 @@
     "format": "prettier --write --ignore-unknown .",
     "format:ci": "prettier --check --ignore-unknown .",
     "version-up": "lerna version",
+    "publish": "yarn lerna run --scope @accessitech/react-icons publish",
     "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch --force-publish",
     "version": "yarn install && git add ."
   },

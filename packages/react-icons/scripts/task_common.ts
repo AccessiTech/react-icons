@@ -168,6 +168,7 @@ export async function writePackageJson(override, { DIST, LIB, rootDir }) {
     ...override,
     scripts: {
       pack: "npm pack",
+      publish: "npm publish",
       // todo: add tests and publish scripts
     },
   };
