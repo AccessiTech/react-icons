@@ -20,46 +20,46 @@ __metadata:
 
 "@accessitech/react-icons@file:../_react-icons_all::locator=demo%40workspace%3Apackages%2Fdemo":
   version: 1.0.4-alpha.1
-  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=9615f6&locator=demo%40workspace%3Apackages%2Fdemo"
+  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=ae1b0b&locator=demo%40workspace%3Apackages%2Fdemo"
   peerDependencies:
     react: "*"
-  checksum: 68ebe06291fe1b33990cc103b76cc701f74213e0cd00775cfeedd48bbe53d6796a55353b29e9a266177c288f4752881f832267eddd9e878505b31a9d66b6146f
+  checksum: d04d5d9d6df36269fbd743703181ba10db5bbe0f2d608ec60bbb31be88663700343de7c43c3fb342972d26540f501f25ed61449a9dc2798f92fae5ca1446d20b
   languageName: node
   linkType: hard
 
 "@accessitech/react-icons@file:../_react-icons_all::locator=demo-all-files%40workspace%3Apackages%2Fdemo-all-files":
   version: 1.0.4-alpha.1
-  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=9615f6&locator=demo-all-files%40workspace%3Apackages%2Fdemo-all-files"
+  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=ae1b0b&locator=demo-all-files%40workspace%3Apackages%2Fdemo-all-files"
   peerDependencies:
     react: "*"
-  checksum: 68ebe06291fe1b33990cc103b76cc701f74213e0cd00775cfeedd48bbe53d6796a55353b29e9a266177c288f4752881f832267eddd9e878505b31a9d66b6146f
+  checksum: d04d5d9d6df36269fbd743703181ba10db5bbe0f2d608ec60bbb31be88663700343de7c43c3fb342972d26540f501f25ed61449a9dc2798f92fae5ca1446d20b
   languageName: node
   linkType: hard
 
 "@accessitech/react-icons@file:../_react-icons_all::locator=preview%40workspace%3Apackages%2Fpreview":
   version: 1.0.4-alpha.1
-  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=9615f6&locator=preview%40workspace%3Apackages%2Fpreview"
+  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=ae1b0b&locator=preview%40workspace%3Apackages%2Fpreview"
   peerDependencies:
     react: "*"
-  checksum: 68ebe06291fe1b33990cc103b76cc701f74213e0cd00775cfeedd48bbe53d6796a55353b29e9a266177c288f4752881f832267eddd9e878505b31a9d66b6146f
+  checksum: d04d5d9d6df36269fbd743703181ba10db5bbe0f2d608ec60bbb31be88663700343de7c43c3fb342972d26540f501f25ed61449a9dc2798f92fae5ca1446d20b
   languageName: node
   linkType: hard
 
 "@accessitech/react-icons@file:../_react-icons_all::locator=react-ts-test%40workspace%3Apackages%2Fts-test":
   version: 1.0.4-alpha.1
-  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=9615f6&locator=react-ts-test%40workspace%3Apackages%2Fts-test"
+  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=ae1b0b&locator=react-ts-test%40workspace%3Apackages%2Fts-test"
   peerDependencies:
     react: "*"
-  checksum: 68ebe06291fe1b33990cc103b76cc701f74213e0cd00775cfeedd48bbe53d6796a55353b29e9a266177c288f4752881f832267eddd9e878505b31a9d66b6146f
+  checksum: d04d5d9d6df36269fbd743703181ba10db5bbe0f2d608ec60bbb31be88663700343de7c43c3fb342972d26540f501f25ed61449a9dc2798f92fae5ca1446d20b
   languageName: node
   linkType: hard
 
 "@accessitech/react-icons@file:../_react-icons_all::locator=webpack4-test%40workspace%3Apackages%2Fwebpack4-test":
   version: 1.0.4-alpha.1
-  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=9615f6&locator=webpack4-test%40workspace%3Apackages%2Fwebpack4-test"
+  resolution: "@accessitech/react-icons@file:../_react-icons_all#../_react-icons_all::hash=ae1b0b&locator=webpack4-test%40workspace%3Apackages%2Fwebpack4-test"
   peerDependencies:
     react: "*"
-  checksum: 68ebe06291fe1b33990cc103b76cc701f74213e0cd00775cfeedd48bbe53d6796a55353b29e9a266177c288f4752881f832267eddd9e878505b31a9d66b6146f
+  checksum: d04d5d9d6df36269fbd743703181ba10db5bbe0f2d608ec60bbb31be88663700343de7c43c3fb342972d26540f501f25ed61449a9dc2798f92fae5ca1446d20b
   languageName: node
   linkType: hard
 
