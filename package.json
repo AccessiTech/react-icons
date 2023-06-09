@@ -21,7 +21,7 @@
     "icons:fetch": "(cd packages/react-icons/ && yarn fetch)",
     "icons:init": "yarn icons:fetch && yarn build",
     "icons:build": "(cd packages/react-icons/ && yarn build)",
-    "build": "yarn build:icons && yarn",
+    "build": "yarn icons:build && yarn",
     "build:preview": "(cd packages/preview/ && yarn build)",
     "build:demo": "(cd packages/demo/ && CI=true yarn test && yarn build)",
     "build:ts-test": "(cd packages/ts-test/ && SKIP_PREFLIGHT_CHECK=true yarn build)",
@@ -33,9 +33,7 @@
     "start:ts-test": "(cd packages/ts-test/ && yarn start)",
     "lint": "yarn eslint .",
     "format": "prettier --write --ignore-unknown .",
-    "format:ci": "prettier --check --ignore-unknown .",
-    "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch --force-publish",
-    "version": "yarn install && git add ."
+    "format:ci": "prettier --check --ignore-unknown ."
   },
   "repository": {
     "type": "git",
