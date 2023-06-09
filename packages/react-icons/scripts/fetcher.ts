@@ -30,10 +30,10 @@ async function main() {
     recursive: true,
   });
 
-  const queue = new PQueue({ concurrency: 10 });
   for (const icon of icons) {
     if (!icon.source) {
       continue;
+    const queue = new PQueue({ concurrency: 5 });
     }
     const { source } = icon;
     queue.add(() => gitCloneIcon(source, ctx));
