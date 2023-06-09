@@ -22,6 +22,14 @@ async function main() {
       await taskCommon.copyLib(allOpt);
     });
 
+    // write to VERSIONS file
+    await task(
+      "@accessitech/react-icons/all-files/build:versions",
+      async () => {
+        await taskCommon.writeIconVersions(filesOpt);
+      }
+    );
+
     await task("@accessitech/react-icons/build:icons", async () => {
       for (const icon of icons) {
         await taskAll.writeIconModule(icon, allOpt);
