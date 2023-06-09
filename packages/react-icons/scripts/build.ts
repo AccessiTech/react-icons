@@ -18,33 +18,36 @@ async function task(name, fn) {
 
 async function main() {
   try {
-    // @react-icons/all
+    // @accessitech/react-icons/all
     const allOpt = {
       rootDir: _rootDir,
       DIST: path.resolve(_rootDir, "../_react-icons_all"),
       LIB: path.resolve(_rootDir, "../_react-icons_all/lib"),
     };
-    await task("@react-icons/all initialize", async () => {
+    await task("@accessitech/react-icons/all initialize", async () => {
       await taskAll.dirInit(allOpt);
       await taskCommon.writeEntryPoints(allOpt);
       await taskCommon.writeIconsManifest(allOpt);
       await taskCommon.writeLicense(allOpt);
-      await taskCommon.writePackageJson({ name: "@accessitech/react-icons" }, allOpt);
+      await taskCommon.writePackageJson(
+        { name: "@accessitech/react-icons" },
+        allOpt
+      );
       await taskCommon.copyReadme(allOpt);
     });
-    await task("@react-icons/all write icons", async () => {
+    await task("@accessitech/react-icons/all write icons", async () => {
       for (const icon of icons) {
         await taskAll.writeIconModule(icon, allOpt);
       }
     });
 
-    // @react-icons/all-files
+    // @accessitech/react-icons/all-files
     const filesOpt = {
       rootDir: _rootDir,
       DIST: path.resolve(_rootDir, "../_react-icons_all-files"),
       LIB: path.resolve(_rootDir, "../_react-icons_all-files/lib"),
     };
-    await task("@react-icons/all-files initialize", async () => {
+    await task("@accessitech/react-icons/all-files initialize", async () => {
       await taskFiles.dirInit(filesOpt);
       await taskCommon.writeEntryPoints(filesOpt);
       await taskCommon.writeIconsManifest(filesOpt);
@@ -55,7 +58,7 @@ async function main() {
       );
       await taskCommon.copyReadme(filesOpt);
     });
-    await task("@react-icons/all-files write icons", async () => {
+    await task("@accessitech/react-icons/all-files write icons", async () => {
       for (const icon of icons) {
         await taskFiles.writeIconModuleFiles(icon, filesOpt);
       }
