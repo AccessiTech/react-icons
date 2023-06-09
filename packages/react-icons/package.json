@@ -49,8 +49,8 @@
   "scripts": {
     "ts": "node -r esbuild-register",
     "build": "yarn ts ./scripts/build.ts",
+    "build:all": "yarn build && yarn ts ./scripts/build-all-files.ts",
     "fetch": "yarn ts ./scripts/fetcher.ts",
-    "pack": "npm pack",
     "check": "yarn ts ./scripts/check.ts"
   }
 }
