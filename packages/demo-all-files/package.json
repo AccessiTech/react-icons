@@ -1,6 +1,6 @@
 {
   "name": "demo-all-files",
-  "version": "1.0.4-alpha.1",
+  "version": "1.0.4-alpha.2",
   "private": true,
   "dependencies": {
     "@accessitech/react-icons": "file:../_react-icons_all",
