@@ -15,7 +15,7 @@
   },
   "scripts": {
     "lerna": "lerna",
-    "version-up": "lerna version --force-local --yes",
+    "version-up": "lerna version --force-publish --yes",
     "pack": "yarn lerna run --scope @accessitech/react-icons pack",
     "publish": "yarn lerna run --scope @accessitech/react-icons publish",
     "icons:fetch": "(cd packages/react-icons/ && yarn fetch)",
