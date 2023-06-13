@@ -29,7 +29,7 @@
     "build:all": "yarn build && yarn build:dev",
     "test:webpack4": "(cd packages/webpack4-test/ && CI=true yarn test)",
     "start:preview": "(cd packages/preview/ && yarn start)",
-    "start:demo": "(cd packages/demo/ && yarn start)",
+    "start:demo": "(cd packages/demo/ && rm -rf ./node_modules/.cache && yarn start)",
     "start:ts-test": "(cd packages/ts-test/ && yarn start)",
     "lint": "yarn eslint .",
     "format": "prettier --write --ignore-unknown .",
