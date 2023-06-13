@@ -1,6 +1,6 @@
 {
   "name": "@accessitech/react-icons",
-  "version": "1.0.4-alpha.0",
+  "version": "1.0.4-alpha.3",
   "description": "SVG React icons of popular icon packs using ES6 imports",
   "author": "Goran Gajic",
   "contributors": [
@@ -22,5 +22,9 @@
   "homepage": "https://github.com/accessitech/react-icons#readme",
   "peerDependencies": {
     "react": "*"
+  },
+  "scripts": {
+    "pack": "npm pack",
+    "publish": "npm publish"
   }
 }

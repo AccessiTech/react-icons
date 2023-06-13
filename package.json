@@ -14,16 +14,35 @@
     "prettier": "^2.7.1"
   },
   "scripts": {
-    "build": "./build-script.sh",
-    "build:init": "yarn fetch-icons && yarn build",
-    "fetch-icons": "cd packages/react-icons/ && yarn fetch",
+    "lerna": "lerna",
+    "version-up": "lerna version --force-publish --yes",
+    "pack": "yarn lerna run --scope @accessitech/react-icons pack",
+    "publish": "yarn lerna run --scope @accessitech/react-icons publish",
+    "icons:fetch": "(cd packages/react-icons/ && yarn fetch)",
+    "icons:init": "yarn icons:fetch && yarn build",
+    "icons:build": "(cd packages/react-icons/ && yarn build)",
+    "build": "yarn icons:build && yarn",
+    "build:legacy": "./build-script.sh",
+    "build:preview": "(cd packages/preview/ && yarn build)",
+    "build:demo": "(cd packages/demo/ && CI=true yarn test && yarn build)",
+    "build:ts-test": "(cd packages/ts-test/ && SKIP_PREFLIGHT_CHECK=true yarn build)",
+    "build:dev": "yarn build:preview && yarn build:demo && yarn build:ts-test && yarn test:webpack4",
+    "build:all": "yarn build && yarn build:dev",
+    "test:webpack4": "(cd packages/webpack4-test/ && CI=true yarn test)",
+    "start:preview": "(cd packages/preview/ && yarn start)",
+    "start:demo": "(cd packages/demo/ && rm -rf ./node_modules/.cache && yarn start)",
+    "start:ts-test": "(cd packages/ts-test/ && yarn start)",
     "lint": "yarn eslint .",
     "format": "prettier --write --ignore-unknown .",
-    "format:ci": "prettier --check --ignore-unknown .",
-    "version-up": "lerna version",
-    "version-snapshot": "lerna version --no-push --no-git-tag-version --yes --preid snapshot prepatch --force-publish",
-    "version": "yarn install && git add .",
-    "lerna": "lerna"
+    "format:ci": "prettier --check --ignore-unknown ."
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:accessitech/react-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/accessitech/react-icons/issues"
+  },
+  "homepage": "https://github.com/accessitech/react-icons#readme",
   "packageManager": "yarn@3.2.4"
 }

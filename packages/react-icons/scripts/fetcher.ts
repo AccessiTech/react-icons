@@ -5,6 +5,7 @@ import path from "path";
 import { type IconSetGitSource } from "./_types";
 import { icons } from "../src/icons";
 import PQueue from "p-queue";
+import { task } from "./task";
 const execFile = util.promisify(rawExecFile);
 
 interface Context {
@@ -20,26 +21,30 @@ async function main() {
       return path.join(distBaseDir, name);
     },
   };
-
-  // rm all icons and mkdir dist
-  await fs.promises.rm(distBaseDir, {
-    recursive: true,
-    force: true,
+  await task("@accessitech/react-icons/remove-icons", async () => {
+    // rm all icons and mkdir dist
+    await fs.promises.rm(distBaseDir, {
+      recursive: true,
+      force: true,
+    });
   });
-  await fs.promises.mkdir(distBaseDir, {
-    recursive: true,
+  await task("@accessitech/react-icons/make-directory", async () => {
+    await fs.promises.mkdir(distBaseDir, {
+      recursive: true,
+    });
   });
 
-  const queue = new PQueue({ concurrency: 10 });
-  for (const icon of icons) {
-    if (!icon.source) {
-      continue;
+  await task("@accessitech/react-icons/clone-icons", async () => {
+    const queue = new PQueue({ concurrency: 5 });
+    for (const icon of icons) {
+      if (!icon.source) {
+        continue;
+      }
+      const { source } = icon;
+      queue.add(() => gitCloneIcon(source, ctx));
     }
-    const { source } = icon;
-    queue.add(() => gitCloneIcon(source, ctx));
-  }
-
-  await queue.onIdle();
+    await queue.onIdle();
+  });
 }
 
 async function gitCloneIcon(source: IconSetGitSource, ctx: Context) {
