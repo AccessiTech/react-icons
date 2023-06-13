@@ -22,6 +22,7 @@
     "icons:init": "yarn icons:fetch && yarn build",
     "icons:build": "(cd packages/react-icons/ && yarn build)",
     "build": "yarn icons:build && yarn",
+    "build:legacy": "./build-script.sh",
     "build:preview": "(cd packages/preview/ && yarn build)",
     "build:demo": "(cd packages/demo/ && CI=true yarn test && yarn build)",
     "build:ts-test": "(cd packages/ts-test/ && SKIP_PREFLIGHT_CHECK=true yarn build)",
