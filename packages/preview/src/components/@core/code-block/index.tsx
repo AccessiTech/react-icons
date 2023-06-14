@@ -22,8 +22,8 @@ export default function CodeBlock({ code, language }) {
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={`${className} code`} style={style}>
-          <a onClick={copyToClipboard} className="prism-code--copy">
-            <IoMdClipboard />
+          <a onClick={copyToClipboard} className="prism-code--copy" title="Copy to Clipboard">
+            <IoMdClipboard aria-hidden="true" />
           </a>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
