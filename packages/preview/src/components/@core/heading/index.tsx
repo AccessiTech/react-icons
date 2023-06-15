@@ -19,13 +19,17 @@ export default function Heading({ isOpen, setIsOpen }) {
   return (
     <div className="brand">
       <ActiveLink href="/">
-        <a>
+        <a title={BRAND_TITLE_MONO + " homepage"}>
           <BrandIcon />
           <span>{BRAND_TITLE_MONO}</span>
         </a>
       </ActiveLink>
       <div className="brand--navmenu">
-        <button className={`menu ${isOpen && "active"}`} onClick={toggleMenu}>
+        <button
+          className={`menu ${isOpen && "active"}`}
+          onClick={toggleMenu}
+          type="button"
+        >
           <div>Menu</div>
         </button>
       </div>

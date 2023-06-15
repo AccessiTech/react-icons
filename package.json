@@ -18,6 +18,7 @@
     "version-up": "lerna version --force-publish --yes",
     "pack": "yarn lerna run --scope @accessitech/react-icons pack",
     "publish": "yarn lerna run --scope @accessitech/react-icons publish",
+    "publish:preview": "yarn lerna run --scope @accessitech/react-icons-preview publish",
     "icons:fetch": "(cd packages/react-icons/ && yarn fetch)",
     "icons:init": "yarn icons:fetch && yarn build",
     "icons:build": "(cd packages/react-icons/ && yarn build)",

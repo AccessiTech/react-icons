@@ -11,11 +11,15 @@ function Icon({ icon, name, highlightPattern = null }) {
   };
 
   const highlightedName = () => {
-    if (highlightPattern)
-      return name
-        .split(highlightPattern)
-        .map((part) => (part.match(highlightPattern) ? <b>{part}</b> : part));
-    return name;
+    if (!highlightPattern) return name;
+
+    const parts = name.split(highlightPattern);
+    const result = [];
+    for (let i = 0; i < parts.length; i++) {
+      result.push(parts[i].match(highlightPattern) ? <b>{parts[i]}</b> : parts[i]);
+    }
+
+    return result;
   };
 
   return (

@@ -22,7 +22,7 @@ pre.code {
     position: absolute;
     top: 0;
     right: 0;
-    padding: var(--space-1);
+    padding: var(--space-2);
     color: var(--color-white);
     cursor: pointer;
   }
@@ -122,14 +122,15 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.7rem;
+    font-size: 1.25rem;
     color: var(--color-brand);
 
     svg {
-      width: 4rem;
+      width: 2rem;
+      height: 2rem;
     }
     span {
-      margin-left: var(--space-2);
+      margin-left: var(--space-1);
     }
   }
   .brand--navmenu {

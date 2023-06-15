@@ -4,7 +4,7 @@ import React from "react";
 
 export default function SearchPage() {
   return (
-    <Container title="🔍 Search">
+    <Container title="Search">
       <SearchPageComponent />
     </Container>
   );

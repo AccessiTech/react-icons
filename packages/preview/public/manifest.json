@@ -1,7 +1,7 @@
 {
   "name": "React Icons",
-  "short_name": "react-icons",
-  "theme_color": "#e91e63",
+  "short_name": "@accessitech/react-icons",
+  "theme_color": "#fc389a",
   "background_color": "#ffffff",
   "display": "browser",
   "Scope": "/",
