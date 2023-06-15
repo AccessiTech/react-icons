@@ -1,9 +1,10 @@
 {
-  "name": "preview",
+  "name": "@accessitech/react-icons-preview",
   "description": "",
   "scripts": {
     "start": "next",
     "build": "next build && next export",
+    "publish": "BASE_PATH=/react-icons yarn build && touch ./out/.nojekyll && gh-pages -d out -t",
     "serve": "next start"
   },
   "keywords": [],
@@ -11,6 +12,7 @@
   "license": "ISC",
   "version": "1.0.4",
   "private": true,
+  "homepage": "https://accessitech.github.io/react-icons/",
   "dependencies": {
     "@accessitech/react-icons": "file:../_react-icons_all",
     "@loadable/component": "^5.15.2",
@@ -34,6 +36,7 @@
     "@types/node": "^18.8.5",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "gh-pages": "^5.0.0",
     "typescript": "^4.8.4"
   },
   "browserslist": [
