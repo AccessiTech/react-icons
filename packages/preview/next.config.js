@@ -4,6 +4,12 @@ const path = require("path");
 
 const prod = process.env.NODE_ENV === "production";
 
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+
+const repoName = isGithubActions
+  ? process.env.GITHUB_REPOSITORY.replace(/.*?\//, "")
+  : "";
+
 module.exports = withPWA({
   disable: !prod,
   dest: "public",
@@ -32,6 +38,6 @@ module.exports = withPWA({
     config.resolve.alias["@utils"] = path.join(__dirname, `src/utils`);
     return config;
   },
-  assetPrefix: process.env.BASE_PATH || "",
-  basePath: process.env.BASE_PATH || "",
+  assetPrefix: process.env.BASE_PATH || (isGithubActions ? "/" + repoName : ""),
+  basePath: process.env.BASE_PATH || (isGithubActions ? "/" + repoName : ""),
 });
