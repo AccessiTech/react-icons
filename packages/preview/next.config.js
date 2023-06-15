@@ -14,7 +14,6 @@ module.exports = withPWA({
   disable: !prod,
   dest: "public",
   register: true,
-  // scope: "/",
   runtimeCaching,
 })({
   experimental: {

@@ -10,7 +10,7 @@ function BrandIcon() {
       fill="none"
       viewBox="0 0 602 602"
     >
-      <title>{BRAND_TITLE + "Logo"}</title>
+      <title>{BRAND_TITLE + " Logo"}</title>
       <g>
         <path
           stroke="#fc389a"
